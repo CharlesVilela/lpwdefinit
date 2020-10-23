@@ -20,6 +20,7 @@ class Livro extends Authenticatable
         'titulo',
         'autor',
         'genero',
+        'quantidade'
     ];
 
     public function getTitulo(){
@@ -27,7 +28,7 @@ class Livro extends Authenticatable
     }
 
     public function setTitulo(String $titulo){
-        $this->attributes['titulo'];
+        $this->attributes['titulo'] = $titulo;
    }
 
     public function getAutor(){
@@ -35,7 +36,7 @@ class Livro extends Authenticatable
     }
 
     public function setAutor(String $autor){
-        $this->attributes['autor'];
+        $this->attributes['autor'] = $autor;
    }
 
     public function getGenero(){
@@ -43,8 +44,22 @@ class Livro extends Authenticatable
     }
 
     public function setGenero(String $genero){
-        $this->attributes['genero'];
+        $this->attributes['genero'] = $genero;
    }
 
+   public function getQuantidade(){
+    return $this->attributes['quantidade'];
+}
+
+public function setQuantidade(int $quantidade){
+    $this->attributes['quantidade'] = $quantidade;
+}
+
+public function reservarLivro()
+    {
+      //  $quantidade = $this->$quantidade;
+        //$quantidade->getQuantidade() - 1;
+        //$this->setQuantidade($quantidade);
+    }
 
 }
