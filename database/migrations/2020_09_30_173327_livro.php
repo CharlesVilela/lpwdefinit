@@ -18,6 +18,7 @@ class Livro extends Migration
             $table->string('titulo');
             $table->string('autor');
             $table->string('genero');
+            $table->integer('quantidade');
             $table->rememberToken();
             $table->timestamps();
         });

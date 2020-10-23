@@ -93,6 +93,10 @@
           <input id="genero" name="genero" type="text">
           <label for="genero">Genero</label>
         </div>
+        <div class="input-field col s12">
+          <input id="quantidade" name="quantidade" type="number">
+          <label for="quantidade">Quantidade</label>
+        </div>
       </div>
 
       <button type="submit" class="waves-effect waves-light btn">

@@ -25,10 +25,22 @@ Route::group(['middleware' => 'web'], function(){
 
 Route::get('/usuarios', 'App\Http\Controllers\UsuarioController@listar');
 
+Route::put('usuarios/update/{id}', 'App\Http\Controllers\UsuarioController@update');
+Route::get('usuarios/{id}/edit', 'App\Http\Controllers\UsuarioController@edit');
+Route::get('/usuarios/{id}/delete', 'App\Http\Controllers\UsuarioController@delete');
+
+
+
 Route::get('/livros/new', 'App\Http\Controllers\LivrosController@new');
 Route::post('/livros/add', 'App\Http\Controllers\LivrosController@add');
-Route::get('/livros/{id}/edit', 'App\Http\Controllers\LivrosController@edit');
+Route::put('livros/update/{id}', 'App\Http\Controllers\LivrosController@update');
 Route::get('/livros', 'App\Http\Controllers\LivrosController@show');
+Route::get('/livros/{id}/delete', 'App\Http\Controllers\LivrosController@delete');
+Route::get('/livros/{id}/edit', 'App\Http\Controllers\LivrosController@edit');
+
+Route::get('/livros/{id}/reservarLivro', 'App\Http\Controllers\LivrosController@reservarLivro');
+
+
 
 
 Route::get('/funcionarios', 'App\Http\Controllers\FuncionarioController@show');
